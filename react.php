@@ -9,9 +9,18 @@
  * Description: Embed Create React App in Wordpress via plugin. Included inline using short code.
  */
  
-function react_wordpress_shortcode() {
+function react_wordpress_shortcode($atts) {
+
+    $my_array_variable = shortcode_atts(array(
+
+    'key1' => '',
+    'key2' => ''
+
+    ),$atts);
+
+    wp_localize_script('hello-world-react', 'app_props', $my_array_variable);
  
- return '<div id="react-wordpress" ></div>';
+    return '<div id="react-wordpress"></div>';
 }
  
 add_shortcode('react-wordpress', 'react_wordpress_shortcode');
