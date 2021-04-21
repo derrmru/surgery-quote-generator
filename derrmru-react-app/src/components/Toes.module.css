@@ -1,0 +1,37 @@
+.toeContain {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.toeContain {
+    margin: 40px auto 0 auto;
+}
+
+.nextButton {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.buttonContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1025px) {
+    .toeContain {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .toeContain {
+        width: 96%;
+    }
+}

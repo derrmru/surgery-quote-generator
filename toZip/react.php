@@ -1,12 +1,12 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: React Wordpress Plugin Boilerplate
+ * Plugin Name: Surgical Quote Builder
  * Plugin URI: https://thepetersweeney.com
  * Version: 1.0.0
  * Author: Peter Sweeney
  * Author URI: https://thepetersweeney.com
- * Description: Embed Create React App in Wordpress via plugin. Included inline using short code.
+ * Description: Surgical Quote Generator - built with React JS
  */
  
 function react_wordpress_shortcode($atts) {

@@ -1,0 +1,15 @@
+.NumberContainer {
+    width: 100%;
+    margin: 20px auto 20px auto;
+    text-align: left;
+}
+
+.numberLabel {
+    width: 98%;
+    margin: auto;
+}
+
+.numberLabel {
+    font-weight: 800;
+    font-size: 20px;
+}

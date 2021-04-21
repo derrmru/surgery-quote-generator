@@ -1,0 +1,21 @@
+.diContainer {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.diInput {
+    width: 98%;
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+    border: none;
+    display:block;
+     -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em; 
+    background-color: white;
+}

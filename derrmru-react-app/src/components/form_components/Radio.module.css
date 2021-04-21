@@ -1,0 +1,38 @@
+.radioContainer {
+    width: 100%;
+    text-align: left;
+}
+
+.radioDescription {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.radioLabel {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.checkboxContainer {
+    width: 80%;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: left;
+}
+
+.checkboxAlignment {
+    margin-left: 20px;
+}
+
+.radioInput {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+    width: 100%;
+}
