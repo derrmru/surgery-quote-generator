@@ -1,6 +1,6 @@
 # Surgery Quote Generator
 
-A surgery quote generator built as a Wordpress plugin using React JS. Makes use of my (React Wordpress Plugin Boilerplate)[https://github.com/derrmru/react-wordpress-plugin-boilerplate].
+A surgery quote generator built as a Wordpress plugin using React JS. Makes use of my [React Wordpress Plugin Boilerplate](https://github.com/derrmru/react-wordpress-plugin-boilerplate).
 
 ## Functionality
 
