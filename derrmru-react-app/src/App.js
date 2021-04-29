@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import ShowQuote from './components/ShowQuote'
+import ShowBunionQuote from './components/ShowBunionQuote'
+import ShowTailorsQuote from './components/ShowTailorsQuote'
 import QuoteMaker from './components/QuoteMaker'
 import './App.css';
 
 function App() {
-  const [type, setType] = useState('toe')
+  const [type, setType] = useState('tailors')
   const [start, setStart] = useState(false)
   const [color, setColor] = useState('#248ec2')
   const [stage, setStage] = useState('');
@@ -78,7 +80,28 @@ function App() {
                 color={color}
               />
             </> :
-            (type !== 'undefined' && type !== '') ?
+            stage === 'showBunionQuote' ? 
+              <>
+              <div
+                style={{
+                  position: 'fixed',
+                  zIndex: 100001,
+                  top: '20px',
+                  right: '20px',
+                  cursor: 'pointer',
+                  color: color
+                }}
+                onClick={() => reset()}
+              >
+                &#10005;
+              </div>
+              <ShowBunionQuote
+                fields={fields}
+                navigate={(stage) => navigate(stage)}
+                color={color}
+              />
+            </> :
+              stage === 'showTailorsQuote' ? 
               <>
                 <div
                   style={{
@@ -92,16 +115,37 @@ function App() {
                   onClick={() => reset()}
                 >
                   &#10005;
-                    </div>
-                <QuoteMaker
-                  type={type}
+                </div>
+                <ShowTailorsQuote
                   fields={fields}
-                  updateField={(name, value) => updateField(name, value)}
-                  setStage={(stage) => navigate(stage)}
+                  navigate={(stage) => navigate(stage)}
                   color={color}
                 />
               </> :
-              <div>Please specify your surgery type in the shortcode parameters</div>
+                (type !== 'undefined' && type !== '') ?
+                  <>
+                    <div
+                      style={{
+                        position: 'fixed',
+                        zIndex: 100001,
+                        top: '20px',
+                        right: '20px',
+                        cursor: 'pointer',
+                        color: color
+                      }}
+                      onClick={() => reset()}
+                    >
+                      &#10005;
+                    </div>
+                    <QuoteMaker
+                      type={type}
+                      fields={fields}
+                      updateField={(name, value) => updateField(name, value)}
+                      setStage={(stage) => navigate(stage)}
+                      color={color}
+                    />
+                  </> :
+                  <div>Please specify your surgery type in the shortcode parameters</div>
       }
     </div>
   );

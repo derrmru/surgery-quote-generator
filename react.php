@@ -1,7 +1,7 @@
 <?php
 /**
  * @wordpress-plugin
- * Plugin Name: React Wordpress Plugin Boilerplate
+ * Plugin Name: Surgery Quote Generator
  * Plugin URI: https://thepetersweeney.com
  * Version: 1.0.0
  * Author: Peter Sweeney

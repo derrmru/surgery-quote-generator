@@ -1,5 +1,6 @@
-import Radio from './form_components/Radio'
+import Bunion from './Bunion'
 import Toes from './Toes'
+import Tailors from './Tailors'
 import style from './QuoteMaker.module.css'
 
 const QuoteMaker = ({ type, fields, updateField, setStage, color }) => {
@@ -11,32 +12,30 @@ const QuoteMaker = ({ type, fields, updateField, setStage, color }) => {
                     type === 'bunion' ||
                     type === 'minimally invasive bunion'
                 ) ?
-                    <div>
-                        <Radio
-                            name="one_or_both_feet"
-                            value={fields.one_or_both_feet}
-                            fields={fields}
-                            updateField={(name, value) => updateField(name, value)}
-                            label={"Please specify which of your feet requires " + type[0].toUpperCase() + type.slice(1) + " surgery?"}
-                            options={['Right Foot', 'Left Foot', 'Both Feet']}
+                    <Bunion 
+                        type={type}
+                        setStage={() => setStage('showBunionQuote')}
+                        fields={fields}
+                        updateField={(name, value) => updateField(name, value)} 
+                        color={color} 
                         />
-                        <Radio
-                            name="type_of_bunion_surgery"
-                            value={fields.type_of_bunion_surgery}
-                            fields={fields}
-                            updateField={(name, value) => updateField(name, value)}
-                            label={"Please select the type of surgery you are interested in."}
-                            options={['Scarf & Akin Osteotomy', 'Minimally Invasive Bunion Surgery']}
-                        />
-                    </div>
-                    : type === 'toe' &&
+                    : type === 'toe' ?
                     <Toes 
                         type={type}
                         setStage={() => setStage('showQuote')}
                         fields={fields} 
                         updateField={(name, value) => updateField(name, value)} 
                         color={color} 
-                    />
+                    /> 
+                        : type === 'tailors' &&
+                        <Tailors 
+                            type={type}
+                            setStage={() => setStage('showTailorsQuote')}
+                            fields={fields} 
+                            updateField={(name, value) => updateField(name, value)} 
+                            color={color} 
+                            />
+
             }
         </div>
     )
