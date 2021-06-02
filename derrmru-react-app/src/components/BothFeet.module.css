@@ -1,0 +1,39 @@
+.footSVG, .labels {
+    width: 70%;
+    max-width: 850px;
+    margin-top: 0;
+}
+
+.labels {
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.labels > p {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    margin: 0;
+}
+
+.st0 {
+    fill: none;
+    stroke: #000000;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    stroke: none;
+    fill: #ffffff00;
+    stroke-miterlimit:10;
+    cursor: pointer;
+    transition: .4s;
+}
+
+@media only screen and (max-width: 1025px) {
+    .footSVG {
+        width: 100%;
+    }
+}

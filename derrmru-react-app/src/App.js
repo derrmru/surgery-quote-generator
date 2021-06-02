@@ -6,7 +6,7 @@ import QuoteMaker from './components/QuoteMaker'
 import './App.css';
 
 function App() {
-  const [type, setType] = useState('tailors')
+  const [type, setType] = useState('general')
   const [start, setStart] = useState(false)
   const [color, setColor] = useState('#248ec2')
   const [stage, setStage] = useState('');
