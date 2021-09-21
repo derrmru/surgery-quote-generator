@@ -23,6 +23,9 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'right_third_toe': {
@@ -33,6 +36,9 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'right_fourth_toe': {
@@ -43,6 +49,12 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Brachymetatarsia': [
+            'External Fixator Lengthening'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'right_fifth_toe': {
@@ -53,6 +65,9 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'right_fifth_toe_joint': {
@@ -84,6 +99,9 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'left_third_toe': {
@@ -94,6 +112,9 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'left_fourth_toe': {
@@ -104,6 +125,12 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Brachymetatarsia': [
+            'External Fixator Lengthening'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'left_fifth_toe': {
@@ -114,6 +141,9 @@ export const structure = {
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
+        ],
+        'Corn or Callus': [
+            'Surgical Excision'
         ]
     },
     'left_fifth_toe_joint': {

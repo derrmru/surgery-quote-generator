@@ -1,0 +1,63 @@
+.showGeneralQuoteContainer {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.showGeneralQuoteContainer > h1 {
+  margin: 40px auto;
+}
+
+.surgery {
+  margin: 20px auto;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  border: 3px dashed;
+  width: 70%;
+}
+
+.surgery > h2 {
+  margin: 20px auto;
+}
+
+.quoteContainer {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.explanation {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.quote {
+  width: 30%;
+  padding: 20px auto 0;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 40px;
+}
+
+.quote > div {
+  margin: 20px auto;
+}
+
+.description {
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .surgery {
+    width: 94%;
+  }
+
+  .quoteContainer {
+    flex-direction: column;
+  }
+
+  .quote {
+    width: 80%;
+    margin: 10px auto;
+  }
+}

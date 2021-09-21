@@ -1,53 +1,58 @@
 .selectionContainer {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .theForm {
-    width: 50%;
-    height: 300px;
-    margin: 20px auto 40px auto;
-    border: 2px dashed;
-    padding: 20px 20px 40px;
-    position: relative;
+  width: 50%;
+  min-height: 300px;
+  margin: 20px auto 40px auto;
+  border: 2px dashed;
+  padding: 20px 20px 40px;
+  position: relative;
 }
 
 .overallSection {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .section {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
 
 .issue {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.issue > input {
+  margin-right: 15px;
 }
 
 .button {
-    height: 40px;
-    border: none;
-    border-radius: 0;
-    color: white;
-    padding: 0 15px;
-    cursor: pointer;
-    transition: .4s;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  color: white;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 @media only screen and (max-width: 600px) {
-    .selectionContainer {
-        width: 96%;
-    }
-    .theForm {
-        width: 60%;
-    }
+  .selectionContainer {
+    width: 96%;
+  }
+  .theForm {
+    width: 60%;
+  }
 }

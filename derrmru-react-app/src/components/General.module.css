@@ -1,23 +1,40 @@
+.general {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+}
+
 .buttonContain {
-    width: 40%;
-    max-width: 550px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  width: 40%;
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .nextButton {
-    transition: .4s;
-    flex: 0px 0px 1;
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  transition: 0.4s;
+  flex: 0px 0px 1;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.warning {
+  width: 100%;
+  margin-bottom: 40px;
+  color: rgb(170, 41, 41);
+}
+
+.warning > p {
+  margin: 0 0 5px;
 }
 
 @media only screen and (max-width: 600px) {
-    .buttonContain {
-        width: 70%;
-    }
+  .buttonContain {
+    width: 70%;
+  }
 }

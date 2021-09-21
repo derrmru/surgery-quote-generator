@@ -1,0 +1,17 @@
+.disclaimer {
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.disclaimer > h3 {
+  text-decoration: underline;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .disclaimer {
+    width: 94%;
+  }
+}

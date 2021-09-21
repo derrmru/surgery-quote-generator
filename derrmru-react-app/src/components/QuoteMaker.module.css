@@ -1,17 +1,42 @@
 .qmContainer {
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  padding-bottom: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .nextButton {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

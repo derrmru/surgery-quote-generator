@@ -6,9 +6,9 @@ import QuoteMaker from './components/QuoteMaker'
 import './App.css';
 
 function App() {
-  const [type, setType] = useState('general')
-  const [start, setStart] = useState(false)
-  const [color, setColor] = useState('#248ec2')
+  const [type, setType] = useState('general');
+  const [start, setStart] = useState(false);
+  const [color, setColor] = useState('#248ec2');
   const [stage, setStage] = useState('');
 
   //if shortcode parameters are used move them to state
@@ -17,6 +17,7 @@ function App() {
       const gProps = window.app_props;
       setType(gProps.surgery_type.toLowerCase())
       setColor(gProps.color)
+      document.documentElement.style.setProperty('--main-color', gProps.color)
     }
   }, [])
 
@@ -43,8 +44,6 @@ function App() {
     setStage('');
   }
 
-  console.log(fields)
-
   return (
     <div className="App">
       {
@@ -56,7 +55,7 @@ function App() {
             style={color ? { backgroundColor: color, color: 'white' } : { color: 'white' }}
           >
             Generate Surgery Quote
-            </button>
+          </button>
         </div> :
           stage === 'showQuote' ?
             <>
@@ -80,28 +79,7 @@ function App() {
                 color={color}
               />
             </> :
-            stage === 'showBunionQuote' ? 
-              <>
-              <div
-                style={{
-                  position: 'fixed',
-                  zIndex: 100001,
-                  top: '20px',
-                  right: '20px',
-                  cursor: 'pointer',
-                  color: color
-                }}
-                onClick={() => reset()}
-              >
-                &#10005;
-              </div>
-              <ShowBunionQuote
-                fields={fields}
-                navigate={(stage) => navigate(stage)}
-                color={color}
-              />
-            </> :
-              stage === 'showTailorsQuote' ? 
+            stage === 'showBunionQuote' ?
               <>
                 <div
                   style={{
@@ -116,12 +94,33 @@ function App() {
                 >
                   &#10005;
                 </div>
-                <ShowTailorsQuote
+                <ShowBunionQuote
                   fields={fields}
                   navigate={(stage) => navigate(stage)}
                   color={color}
                 />
               </> :
+              stage === 'showTailorsQuote' ?
+                <>
+                  <div
+                    style={{
+                      position: 'fixed',
+                      zIndex: 100001,
+                      top: '20px',
+                      right: '20px',
+                      cursor: 'pointer',
+                      color: color
+                    }}
+                    onClick={() => reset()}
+                  >
+                    &#10005;
+                  </div>
+                  <ShowTailorsQuote
+                    fields={fields}
+                    navigate={(stage) => navigate(stage)}
+                    color={color}
+                  />
+                </> :
                 (type !== 'undefined' && type !== '') ?
                   <>
                     <div

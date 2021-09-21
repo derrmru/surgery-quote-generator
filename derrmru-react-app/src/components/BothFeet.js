@@ -22,6 +22,7 @@ const FullFoot = ({
             <h3 style={{ margin: '60px 40px 0 40px', color: color || '' }}>
                 Please Select The Areas Of The Foot That Require Surgery
             </h3>
+            <hr style={{width: '50%', margin: '10px auto', height: '1px', border: 'none', backgroundColor: color}} />
             <div className={style.labels}>
                 <p>Left Foot</p><p>Right Foot</p>
             </div>
