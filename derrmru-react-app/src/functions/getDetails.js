@@ -54,6 +54,12 @@ export const getDetails = (pricing, issues, areas, data) => {
                     areas['Left']['Partial Nail Avulsion'] === 1 ? 'left foot' : 'right foot',
                 numberOfToes: data.nailInfo.largestNumber
             })
+        } else if (issue === 'First MTP Joint Fusion') {
+            res.push({
+                issue: 'first MTP joint fusion',
+                laterality: areas['Left']['First MTP Joint Fusion'] === 1 ? 'left foot' : 'right foot'
+
+            })
         }
     }
     console.log('res', res)

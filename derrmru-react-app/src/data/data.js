@@ -1,9 +1,8 @@
 export const structure = {
     'right_big_toe': {
-        'Big Toe Arthritis' : [
+        'Big Toe Arthritis': [
             'Cheilectomy',
-            'First MTP Joint Fusion',
-            'First MTP Joint Implants'
+            'First MTP Joint Fusion'
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'
@@ -76,10 +75,9 @@ export const structure = {
         ]
     },
     'left_big_toe': {
-        'Big Toe Arthritis' : [
+        'Big Toe Arthritis': [
             'Cheilectomy',
-            'First MTP Joint Fusion',
-            'First MTP Joint Implants'
+            'First MTP Joint Fusion'
         ],
         'Ingrown Toenail': [
             'Partial Nail Avulsion'

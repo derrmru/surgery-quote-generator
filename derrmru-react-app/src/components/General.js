@@ -47,9 +47,29 @@ const General = ({
                     <p>If you require more, please contact the clinic directly.</p>
                 </>
             )
-        } else {
-            setWarning('')
         }
+
+        /**
+         * Big Toe Fusion can only be performed one at a time, ensure only one is selected
+         */
+        let fusionCount = 0;
+        for (const issue in issues) {
+            if (issues[issue]['First MTP Joint Fusion']) fusionCount += 1
+            if (fusionCount > 1) {
+                setWarning(
+                    <>
+                        <p>First MTP Joint Fusions can only be performed one at a time.</p>
+                        <p>This Quote Generator will only provide a quote for up to one First MTP Joint Fusion.</p>
+                    </>
+                )
+            }
+        }
+
+        /**
+         * if above warnings are reset, then remove warning
+         */
+
+        if (count <= 2 && fusionCount < 2) setWarning('')
     }, [issues])
 
     const upStage = () => {
@@ -92,15 +112,6 @@ const General = ({
                                 warning && <div className={style.warning + ' fade-in'}>{warning}</div>
                             }
                             <div className={style.buttonContain}>
-                                {/*
-                                    <button
-                                        className={style.nextButton + ' fade-in'}
-                                        style={color ? { backgroundColor: color, color: 'white' } : { color: 'white' }}
-                                        onClick={() => setStage(stage - 1)}
-                                    >
-                                        Previous
-                                    </button>
-                                */}
                                 {//if there are at least as many true issues as there are true selections, show next button
                                     (Object.keys(issues)
                                         .filter((issue) => Object.keys(issue)

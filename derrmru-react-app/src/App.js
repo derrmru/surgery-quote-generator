@@ -52,7 +52,7 @@ function App() {
         >
           <button
             onClick={() => startIt()}
-            style={color ? { backgroundColor: color, color: 'white' } : { color: 'white' }}
+            className="openButton"
           >
             Generate Surgery Quote
           </button>

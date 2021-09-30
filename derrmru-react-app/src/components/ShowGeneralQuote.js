@@ -7,6 +7,7 @@ import { getCheilectomy } from '../functions/getCheilectomy'
 import { getBrachymetatarsia } from '../functions/getBrachymetatarsia'
 import { getCorns } from '../functions/getCorns'
 import { getNailAvulsion } from '../functions/getNailAvulsion'
+import { getBigToeFusion } from '../functions/getBigToeFusion'
 import { getDetails } from '../functions/getDetails'
 import Disclaimer from './Disclaimer'
 import $ from 'jquery'
@@ -24,9 +25,7 @@ const ShowGeneralQuote = ({
 
     //received pricing state
     const [pricing, setPricing] = useState([]);
-    console.log('pricing', pricing)
     const [result, setResult] = useState([]);
-    console.log('result', result)
 
     //post data and receive pricing
     useEffect(() => {
@@ -38,7 +37,8 @@ const ShowGeneralQuote = ({
             cheilectomyInfo: getCheilectomy(areas), //return object specifying isCheilectomy <boolean>, isBilateral <boolean>, left or right
             brachyInfo: getBrachymetatarsia(areas), //return object specifying isBrachy <boolean>, isBilateral <boolean>, left or right
             cornInfo: getCorns(areas), //return object specifying isCorn <boolean>, isBilateral <boolean> and largest number of toes
-            nailInfo: getNailAvulsion(areas) //return object specifying isNailAvulsion <boolean>, isBilateral <boolean> and largest number of toes
+            nailInfo: getNailAvulsion(areas), //return object specifying isNailAvulsion <boolean>, isBilateral <boolean> and largest number of toes
+            fusionInfo: getBigToeFusion(areas) //return object specifying isFusion, (this surgery is never bilateral), left or right 
         }
 
         if (pricing.length === 0) {
@@ -69,7 +69,7 @@ const ShowGeneralQuote = ({
                                 {//description of selection
                                     result && <div key={"item" + i} className={style.description}>
                                         You have selected
-                                        {(item.issue === 'cheilectomy' || item.issue === 'nail avulsion') && ' a'}
+                                        {(item.issue === 'cheilectomy' || item.issue === 'nail avulsion' || item.issue === 'first MTP joint fusion') && ' a'}
                                         {` ${item.laterality}`}
                                         {` ${item.issue}`}
                                         {(item.numToes || item.numberOfToes) && ' for'}

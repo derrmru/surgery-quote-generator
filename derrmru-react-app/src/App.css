@@ -18,12 +18,27 @@
   align-items: center;
 }
 
-.startButton > button {
+.openButton {
   padding: 20px;
+  width: 96%;
+  max-width: 350px;
+  margin: auto;
+  color: white;
+  font-size: 16px;
   box-sizing: border-box;
-  border-radius: 0;
-  border: none;
+  border-radius: 20px;
+  border: 2px solid #0000;
   cursor: pointer;
+  transition: 0.4s;
+  background-color: var(--main-color);
+}
+
+@media (hover: hover) {
+  .openButton:hover {
+    background-color: #ebebeb;
+    border-color: var(--main-color);
+    color: #000;
+  }
 }
 
 /*fade in css animation*/
